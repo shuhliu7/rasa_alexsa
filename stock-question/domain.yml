@@ -1,0 +1,56 @@
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - check_stock
+  - check_apple
+  - check_tesla
+  - check_S&P500_Index
+  - check_change
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_happy:
+  - text: "That's great. How can I help you?"
+
+  utter_sad:
+  - text: "Sorry to hear that. How can I help you?"
+
+  utter_whichStock:
+  - text: "Which stock would you like to check? Apple, Tesla, or S&P 500 Index?"
+
+  utter_apple:
+  - text: "The stock price for APPLE is 259.43 USD"
+
+  utter_apple1:
+  - text: "It's 1.16% down"
+
+  utter_tesla:
+  - text: "The stock price for Tesla is 545.45 USD"
+
+  utter_tesla1:
+  - text: "It's 5.66% up"
+
+  utter_S&P500_Index:
+  - text: "The stock price for S&P 500 Index is 2,659.41 USD"
+
+  utter_S&P500_Index1:
+  - text: "It's 0.16% up"
+
+  utter_sure:
+  - text: "sure"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
