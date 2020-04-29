@@ -9,10 +9,13 @@ intents:
   - search_provider
   - thanks
   - out_of_scope
+  - yes
+  - no
+
 
 entities:
-- location
 - stock
+
 
 slots:
   stock:
@@ -27,7 +30,9 @@ actions:
 - utter_goodbye
 - utter_whichStock
 - search_stock_price
-
+- utter_continue
+forms:
+- continue_form
 
 responses:
   utter_greet:
@@ -47,3 +52,6 @@ responses:
   utter_whichStock:
   - text: "I am a stock-price-searcher. Please enter the stock symbol (ticker)."
   - text: "I am a stock-price-finder. I can help you find the latest stock price. What's your stock（ticker) symbol?"
+
+  utter_continue:
+  - text: "Would you like to continue searching? Please enter Y or N."
