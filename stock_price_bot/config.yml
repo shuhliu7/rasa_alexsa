@@ -8,13 +8,13 @@ pipeline:
 - name: "CRFEntityExtractor"
 - name: "EntitySynonymMapper"
 - name: "CountVectorsFeaturizer"
-- name: "EmbeddingIntentClassifier"
+- name: "DIETClassifier"
 
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/
 policies:
   - name: MemoizationPolicy
   - name: MappingPolicy
-  - name: EmbeddingPolicy
+  - name: TEDPolicy
   - name: FormPolicy
   - name: TwoStageFallbackPolicy
