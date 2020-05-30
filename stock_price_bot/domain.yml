@@ -15,6 +15,7 @@ intents:
 
 entities:
 - stock
+- company_name
 
 
 slots:
@@ -22,6 +23,8 @@ slots:
     type: text
   price:
     type: float
+  company_name:
+    type: text
 
 
 actions:
@@ -30,7 +33,9 @@ actions:
 - utter_goodbye
 - utter_whichStock
 - search_stock_price
-- utter_continue
+- search_stock_price_company
+
+
 forms:
 - continue_form
 
@@ -41,17 +46,14 @@ responses:
   - text: "Hello! What can I help you find today?"
 
   utter_goodbye:
-  - text: "Talk to you later!"
-  - text: "Have a good day."
+  - text: "At your service anytime."
   - text: "Until next time!"
+
 
   utter_noworries:
   - text: "My pleasure."
   - text: "You are welcome!"
 
   utter_whichStock:
-  - text: "I am a stock-price-searcher. Please enter the stock symbol (ticker)."
-  - text: "I am a stock-price-finder. I can help you find the latest stock price. What's your stock（ticker) symbol?"
-
-  utter_continue:
-  - text: "Would you like to continue searching? Please enter Y or N."
+  - text: "I am a stock-price-searcher. Please enter the stock symbol (ticker) or company name."
+  - text: "I am a stock-price-finder. I can help you find the latest stock price. What's your stock（ticker) symbol or company name?"
